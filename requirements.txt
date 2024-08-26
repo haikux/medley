@@ -1,0 +1,8 @@
+PyPDF2
+git+https://github.com/huggingface/transformers.git 
+sentencepiece
+presidio_analyzer
+presidio_anonymizer
+torch 
+torchvision 
+torchaudio
