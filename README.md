@@ -5,4 +5,10 @@
 - Transcribe audio files (supports around 100 languages)
 - Identify and sanitize PII information for upstream services
 
-## Under Active Development - Not Stable
+### Supports
+- Text [.pdf, .pptx]
+- Audio [.wav]
+
+### WIP
+- Text [.html]
+
