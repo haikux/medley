@@ -27,20 +27,9 @@ res = pii.anonymize(text, resp)
 """
 # Load and transcribe audio files
 """
+vf = Voice()
 file_path = '/Users/haikux/Documents/projects/medley/assets/audio/sample2.wav' 
-with wave.open(file_path, 'rb') as wav_file:
-    sample_rate = wav_file.getframerate()
-    n_frames = wav_file.getnframes()
-    duration = n_frames / sample_rate
-    audio_data = wav_file.readframes(n_frames)
-
-# Convert audio data to numpy array
-audio = np.frombuffer(audio_data, dtype=np.int16)
-audio_bytes = audio.tobytes()
-
-url = 'http://localhost:5003/speech-to-text'
-data = {'audio': base64.b64encode(audio_bytes).decode("utf-8"), 'sampling_rate': str(sample_rate), 'target_lang': 'eng', 'pii_mask': 'false'}
-response = requests.post(url, data=data)
-
-print("resp: ",response.text)
+audio, sample_rate, _, _ = vf.read_wav(file_path)
+text = vf.speech_to_text(audio, sample_rate)
+print(text)
 
