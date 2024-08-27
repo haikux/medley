@@ -1,5 +1,5 @@
-from .pii import PII
-from .const import M4T_URL
+from src.pii import PII
+from src.const import M4T_URL
 import numpy as np
 import wave
 import json

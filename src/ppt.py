@@ -1,8 +1,8 @@
-from .pii import PII
+from src.pii import PII
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 from io import StringIO
-from .const import ASSETS
+from src.const import ASSETS
 
 class PPTX(PII):
     def __init__(self, file_loc: str):

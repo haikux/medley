@@ -1,7 +1,7 @@
 from pypdf import PdfReader
 from collections import defaultdict
-from .const import ASSETS
-from .pii import PII
+from src.const import ASSETS
+from src.pii import PII
 import json
 
 class PDF(PII):

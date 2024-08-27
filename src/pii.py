@@ -1,4 +1,4 @@
-from .const import PRESIDIO_ANOM_URL, PRESIDIO_ANALYZER_URL
+from src.const import PRESIDIO_ANOM_URL, PRESIDIO_ANALYZER_URL
 import requests as req
 import json
 
