@@ -1,10 +1,4 @@
-from src import PDF, Voice, PII
-
-import wave
-import numpy as np
-from io import BytesIO
-import requests
-import base64
+from src import PDF, Voice, PII, PPTX
 
 
 #df = PDF("/Users/haikux/Documents/projects/medley/Sample.pdf")
@@ -26,10 +20,21 @@ res = pii.anonymize(text, resp)
 
 """
 # Load and transcribe audio files
-"""
+
 vf = Voice()
 file_path = '/Users/haikux/Documents/projects/medley/assets/audio/sample2.wav' 
 audio, sample_rate, _, _ = vf.read_wav(file_path)
 text = vf.speech_to_text(audio, sample_rate)
 print(text)
+"""
+
+"""
+# Load and parse PPTX
+"""
+pptx = '/Users/haikux/Documents/projects/medley/assets/pptx/sample.pptx'
+px = PPTX(pptx)
+res = px.get_metadata()
+#res = px.read_page(page=1, save_images=False)
+print(res)
+
 

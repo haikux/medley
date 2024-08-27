@@ -3,3 +3,4 @@ git+https://github.com/huggingface/transformers.git
 sentencepiece
 presidio_analyzer
 presidio_anonymizer
+python-pptx
